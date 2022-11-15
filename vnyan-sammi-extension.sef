@@ -1,0 +1,71 @@
+[extension_name]
+VNyan Sammi Extension
+
+[extension_info]
+version 0.0.1 by Swolekat
+[insert_external]
+
+[insert_command]
+SAMMI.extCommand("VNyan Message", color = 3355443, height = 52,
+  {
+    commandName: ["Command Name", 14, "", null, []],
+    port: ["WS Port", 14, "8000", null, []],
+  }
+);
+
+[insert_hook]
+case "VNyan Message":{
+  sendMessage(SAMMIJSON);
+} break
+[insert_script]
+const portToSockets = {};
+const portToQueues = {};
+
+function getUrlFromPort(port){
+    return `ws://localhost:${port}/vnyan`;
+}
+
+function deleteSocketAndRetry(port){
+    SAMMI.alert('VNyan: Disconnected, reconnecting in 5 seconds');
+    delete portToSockets[port];
+    setTimeout(function(){ openSocket(port); }, 5000);
+}
+
+function openSocket(port) {
+    let socket = portToSockets[port];
+    if(!socket || socket.readyState === 3){
+       socket = new WebSocket(getUrlFromPort(port));
+       portToSockets[port] = socket;
+
+       socket.onOpen = function(event){
+         SAMMI.alert(`VNyan connected on ${port}`);
+         const queue = portToQueues[port];
+         queue.forEach(function(command){
+           socket.send(command);
+         });
+         portToQueues[port] = [];
+       };
+
+       socket.onclose = function() {
+         deleteSocketAndRetry(port);
+       };
+    }
+    if(socket.readyState !== 2){
+        return;
+    }
+    // 2 means it's closing. Delete and try to reopen
+    deleteSocketAndRetry(port);
+}
+
+function sendMessage(json) {
+  const port = json.port;
+  const commandName = json.commandName;
+  const socket = portToSockets[port];
+  if(!socket || socket.readyState !== 1){
+    portToQueues[socket] = [...(portToQueues[socket] || []), commandName];
+    openSocket(port);
+    return;
+  }
+  socket.send(commandName);
+}
+[insert_over]
