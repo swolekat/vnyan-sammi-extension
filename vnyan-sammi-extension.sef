@@ -2,7 +2,7 @@
 VNyan Sammi Extension
 
 [extension_info]
-version 0.0.1 by Swolekat
+version 0.0.2 by Swolekat
 [insert_external]
 
 [insert_command]
@@ -37,11 +37,11 @@ function openSocket(port) {
        socket = new WebSocket(getUrlFromPort(port));
        portToSockets[port] = socket;
 
-       socket.onOpen = function(event){
+       socket.onopen = function(event){
          SAMMI.alert(`VNyan connected on ${port}`);
          const queue = portToQueues[port];
          queue.forEach(function(command){
-           socket.send(command);
+            socket.send(command);
          });
          portToQueues[port] = [];
        };
