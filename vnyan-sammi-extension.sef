@@ -2,7 +2,7 @@
 VNyan Sammi Extension
 
 [extension_info]
-version 0.0.2 by Swolekat
+version 0.0.3 by Swolekat
 [insert_external]
 
 [insert_command]
@@ -62,7 +62,7 @@ function sendMessage(json) {
   const commandName = json.commandName;
   const socket = portToSockets[port];
   if(!socket || socket.readyState !== 1){
-    portToQueues[socket] = [...(portToQueues[socket] || []), commandName];
+    portToQueues[port] = [...(portToQueues[port] || []), commandName];
     openSocket(port);
     return;
   }
