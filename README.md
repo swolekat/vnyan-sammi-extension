@@ -42,6 +42,7 @@ To set up the trigger inside of sammi, you'll need to use an Extension trigger. 
 * Is the websocket receiver turned on?
 * Is the port number correct?
 * Is the command name spelled correctly?
+* make sure that `node-modules` exists in the `vnyan-sammi-extension` folder (inside your sammi folder). If it doesn't run `npm i`.
 
 # Contact
 https://www.twitch.tv/swolekat
