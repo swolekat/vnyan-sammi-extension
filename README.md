@@ -3,6 +3,9 @@ SAMMI extension for vnyan
 
 # Installation
 ** PLEASE NOTE. AS OF 1.0.0 ONWARD, YOU WILL NEED NODE INSTALLED IF YOU WANT TO HAVE THE TRIGGERS WORK **
+
+** AS OF 2.0.0, YOU NEED TO BE ON WINDOWS 10 OR LATER FOR THE INSTALLATION PROCESS TO WORK**
+
 Inside of Sammi, on the left select bridge. Select install new extension. Install vnyan-sammi-extension.sef.
 
 There will be a new deck with a big red button. Run this button once.
