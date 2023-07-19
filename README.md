@@ -41,6 +41,7 @@ To set up the trigger inside of sammi, you'll need to use an Extension trigger. 
 
 # Troubleshooting
 * Did you install node?
+* Does the path to your folder have spaces in it? If so please remove.
 * Did you press the big red button twice?
 * Is the websocket receiver turned on?
 * Is the port number correct?
