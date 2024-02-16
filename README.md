@@ -40,6 +40,8 @@ To set up the trigger inside of sammi, you'll need to use an Extension trigger. 
 ![Sammi Extension Trigger](./images/extensionTrigger.PNG "Sammi Extension Trigger")
 
 # Troubleshooting
+If you have no intention of having vnyan send information to sammi, and you don't want to see the error message of it trying to reconnect, disable the triggers for the `Startup` button in the deck that was created. 
+
 * Did you install node?
 * Does the path to your folder have spaces in it? If so please remove.
 * Did you press the big red button twice?
