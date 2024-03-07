@@ -8,7 +8,7 @@ SAMMI extension for vnyan
 
 Inside of Sammi, on the left select bridge. Select install new extension. Install vnyan-sammi-extension.sef.
 
-There will be a new deck with a big red button. Run this button once.
+There will be a new deck with a big red button. Run this button twice.
 
 Then restart sammi.
 
