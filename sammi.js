@@ -1,40 +1,3 @@
-[extension_name]
-VNyan Sammi Extension
-
-[extension_info]
-version 4.0.0 by Swolekat
-[insert_external]
-<div>
-    <h1>
-        VNyan SAMMI Plugin
-    </h1>
-    <h2>
-        Version 4.0.0
-    </h2>
-    <p>
-        Hewwow, thank you for installing my plugin. I have instructions on the <a href="https://github.com/swolekat/vnyan-sammi-extension">github</a> if you get lost.
-        If you want to be extra kawaii maybe say hi on <a href="https://www.twitch.tv/swolekat">stweam</a> UwU
-    </p>
-</div>
-[insert_command]
-SAMMI.extCommand("VNyan Message", color = 3355443, height = 52,
-  {
-    commandName: ["Command Name", 14, "", null, []],
-    port: ["WS Port", 14, "8000", null, []],
-  }
-);
-SAMMI.extCommand("VNyan API Message", color = 3355443, height = 52,
-  {
-    commandName: ["Command Name", 14, "", null, []],
-    port: ["Port", 14, "8069", null, []],
-    data: ["JSON Data", 14, "", null, []],
-  }
-);
-vnyanMain();
-[insert_hook]
-// no hooks
-
-[insert_script]
 function vnyanMain() {
     const portToSockets = {};
     const portToQueues = {};
@@ -103,5 +66,3 @@ function vnyanMain() {
         });
     });
 }
-
-[insert_over]
