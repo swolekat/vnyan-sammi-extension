@@ -1,6 +1,6 @@
 # VNyan SAMMI Extension
 
-This is an extenison for [SAMMI](https://sammi.solutions/) to talk to [VNyan](https://suvidriel.itch.io/vnyan) If you need to go the other direction (vnyan controlling sammi) please check out the [SAMMI VNyan Plugin](https://github.com/swolekat/vnyan-sammi-extension)
+This is an extenison for [SAMMI](https://sammi.solutions/) to talk to [VNyan](https://suvidriel.itch.io/vnyan) If you need to go the other direction (vnyan controlling sammi) please check out the [SAMMI VNyan Plugin](https://github.com/swolekat/sammi-vnyan-plugin?tab=readme-ov-file)
 
 # Installation
 ** PLEASE NOTE. AS OF 4.0.0. ALL COMMUNICATION FROM VNYAN TO SAMMI WILL BE COVERED BY THE PLUGIN **
