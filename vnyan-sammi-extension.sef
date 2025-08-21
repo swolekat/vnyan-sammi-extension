@@ -2,17 +2,17 @@
 VNyan Sammi Extension
 
 [extension_info]
-version 4.0.0 by Swolekat
+version 4.0.1 by Swolekat
 [insert_external]
 <div>
     <h1>
-        VNyan SAMMI Plugin
+        VNyan SAMMI Extension
     </h1>
     <h2>
-        Version 4.0.0
+        Version 4.0.1
     </h2>
     <p>
-        Hewwow, thank you for installing my plugin. I have instructions on the <a href="https://github.com/swolekat/vnyan-sammi-extension">github</a> if you get lost.
+        Hewwow, thank you for installing my extension. I have instructions on the <a href="https://github.com/swolekat/vnyan-sammi-extension">github</a> if you get lost.
         If you want to be extra kawaii maybe say hi on <a href="https://www.twitch.tv/swolekat">stweam</a> UwU
     </p>
 </div>
