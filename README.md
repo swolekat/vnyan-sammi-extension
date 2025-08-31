@@ -21,7 +21,7 @@ Websockets use the `VNyan Message` command in SAMMI. Inside of VNyan you will us
 API Messages use the `VNyan API Message` command in SAMMI. Inside of VNyan you will use the `API Message` node.
 
 ## Receiving Data from VNyan
-See [SAMMI VNyan Plugin](https://github.com/swolekat/vnyan-sammi-extension)
+See [SAMMI VNyan Plugin](https://github.com/swolekat/sammi-vnyan-plugin)
 
 # Troubleshooting
 * Is the websocket receiver turned on?
